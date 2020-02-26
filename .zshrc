@@ -6,7 +6,7 @@ current_git_branch() {
   git rev-parse --abbrev-ref HEAD 2> /dev/null
 }
 
-PROMPT="%1d %{$fg[green]%}(\$(current_git_branch)) %{$reset_color%}> "
+PROMPT="%1d %{$fg[green]%}\$(current_git_branch) %{$reset_color%}> "
 
 # nvm #
 #######
