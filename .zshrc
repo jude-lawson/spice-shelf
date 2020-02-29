@@ -76,13 +76,10 @@ function h() {
 # Rails #
 #########
 
-routes() {
-  rails routes --expanded -c $1
-}
-
-be () {
-  bundle exec $1
-}
+alias be="bundle exec"
+alias spec="bundle exec rspec"
+alias t="bundle exec rspec"
+alias routes="rails routes --expanded -c"
 
 # End #
 #######
