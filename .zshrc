@@ -17,38 +17,18 @@ source $(brew --prefix nvm)/nvm.sh
 #######
 
 alias gs="git status"
+alias gcm="git commit -m"
+alias gd="git diff"
+alias push="git push origin"
+alias fpush="git push -f origin"
+alias pull="git pull origin"
+alias rebase="git pull --rebase origin"
+alias gco="git checkout"
+alias copybranch="git rev-parse --abbrev-ref HEAD | pbcopy"
 
 function ga() {
   git add $1
   git status
-}
-
-function gcm() {
-  git commit -m $1
-}
-
-function gd() {
-  git diff $1
-}
-
-function push() {
-  git push origin $1
-}
-
-function fpush() {
-  git push -f origin $1
-}
-
-function pull() {
-  git pull origin $1
-}
-
-function rebase() {
-  git pull --rebase origin $1
-}
-
-function gco() {
-  git checkout $1
 }
 
 function gbsearch() {
@@ -59,7 +39,6 @@ function grsearch() {
   git branch --remote --list "*$1*"
 }
 
-alias copybranch="git rev-parse --abbrev-ref HEAD | pbcopy"
 
 # Elixir #
 ##########
